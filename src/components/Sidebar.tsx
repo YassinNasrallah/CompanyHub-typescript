@@ -5,7 +5,7 @@ import { Building2,Settings, House, BriefcaseBusinessIcon, Users  } from "lucide
 const Sidebar = () => {
   
   return (
-    <div className={`hidden md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950 dark:bg-slate-950/80 
+    <div className={` md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950 dark:bg-slate-950/80 
     backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col fixed top-0 left-0 md:relative`}>
      <div className=" p-6  dark:border-slate-700/50">
      

@@ -1,10 +1,10 @@
 import { Search, Bell,Menu, CircleUserRound, Building2 } from "lucide-react"
 import useMenu from "../hook/useMenu"
 const Navbar = () => {
-  const {openMenu, handlClick} = useMenu()
+  const { handlClick} = useMenu()
   return (
     <div className=" flex justify-between item-center relative bg-white p-4  ">
-      <div className="flex gap-4 justify-center items-center flex lg:hidden md:hidden relative">
+      <div className=" gap-4 justify-center items-center flex lg:hidden md:hidden relative">
           <Menu onClick={handlClick} size={35} className="cursor-pointer"/>
         <div className="flex items-center gap-2">
           <Building2 size={35}/>
@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
       </div>
            
-        <div className="hidden lg:flex md:flex relative w-[400px] ">
+        <div className="hidden lg:flex md:flex relative w-100 ">
            <Search className="absolute left-3 -translate-y-1/2 top-1/2 text-slate-500"/>
            <input type="text" placeholder="Saerch" className="rounded-md bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-50 w-full p-2 pl-10 outline-none border-1 border-transparent duration-300 focus:border-gray-300 "/>
         </div>
