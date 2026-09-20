@@ -1,4 +1,5 @@
 
+import Navbar from '../../../components/Navbar'
 import Sidebar from '../../../components/Sidebar'
 import CompanyProfilecard from '../components/CompanyProfilecard'
 import CompanyRecentActivity from '../components/CompanyRecentActivity'
@@ -12,6 +13,7 @@ const Dashboard = () => {
         <div className="flex h-screen overflow-hidden">
             <Sidebar />
              <div className="flex flex-col flex-1 gap-7 overflow-y-auto ">
+              <Navbar />
                  <OverviewHeader />
                  <OverviewCards />
                  <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 m-8 ">

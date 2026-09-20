@@ -2,7 +2,7 @@ import { ArrowUp, ArrowDown, Users, User, Mail, Blocks } from "lucide-react";
 import { DashboardData } from "../../../interface/DataType";
 const OverviewCards = () => {
   return (
-    <div className="mx-5 grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-5">
+    <div className="mx-5 grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-5">
       <div className="bg-white w-auto flex flex-col gap-3 rounded-xl border border-gray-800/20 p-6">
          <Users className="bg-blue-100 text-blue-600 p-2 w-10 h-10 rounded-full"/>
          <div>
