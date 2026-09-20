@@ -14,7 +14,7 @@ const Navbar = () => {
            
         <div className="hidden lg:flex md:flex relative w-100 ">
            <Search className="absolute left-3 -translate-y-1/2 top-1/2 text-slate-500"/>
-           <input type="text" placeholder="Saerch" className="rounded-md bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-50 w-full p-2 pl-10 outline-none border-1 border-transparent duration-300 focus:border-gray-300 "/>
+           <input type="text" placeholder="Saerch" className="rounded-md bg-linear-to-br from-slate-100 via-blue-50 to-indigo-50 w-full p-2 pl-10 outline-none border border-transparent duration-300 focus:border-gray-300 "/>
         </div>
 
         <div className="flex items-center gap-2 mr-5">

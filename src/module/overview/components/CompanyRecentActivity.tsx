@@ -11,7 +11,7 @@ const CompanyRecentActivity = () => {
         <div className="flex flex-col gap-3">
 
                   {invitedUsers.map((user)=>(
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between" key={user.id} >
                      <div className="flex justify-between items-center gap-5">
                       <UserPlus className="bg-green-100 text-green-600 p-2 w-10 h-10 rounded-full"/>
                       <div>
@@ -26,7 +26,7 @@ const CompanyRecentActivity = () => {
                    ))}
 
                    {deactivatedUsers.map((user)=>(
-                       <div className="flex items-center justify-between">
+                       <div className="flex items-center justify-between" key={user.id}>
                      <div className="flex justify-between items-center gap-5">
                       <UserX className="bg-red-100 text-red-600 p-2 w-10 h-10 rounded-full"/>
                       <div>

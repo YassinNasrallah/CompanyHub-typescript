@@ -12,7 +12,7 @@ export type Activity = {
 
 export const Users:Activity[]=[
       {id:1 , user:'uassin nassrallah', email:'yassinnasrallah@gmail.com', activity:'user_Invited', date:'2h ago'},
-      {id:1 , user:'ussef nassrallah', email:'ussefnasrallah@gmail.com', activity:'user_deactivated', date:'week ago'},
+      {id:2 , user:'ussef nassrallah', email:'ussefnasrallah@gmail.com', activity:'user_deactivated', date:'week ago'},
     
 ]
 
