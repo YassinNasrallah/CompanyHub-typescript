@@ -7,6 +7,7 @@ export const DashboardData = {
     address: "45 Hassan II Avenue, Rabat, Morocco",
     phone: "+212 537 45 67 89",
     website: "https://novatech.example.com",
+    profile:'NS'
   },
 
   statistics: {

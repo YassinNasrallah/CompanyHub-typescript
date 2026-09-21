@@ -1,13 +1,15 @@
 
-
-import { Link } from "react-router-dom"
-import { Building2,Settings, House, BriefcaseBusinessIcon, Users  } from "lucide-react"
+import { sidebarItems } from "../interface/SidebarType"
+import { NavLink } from "react-router-dom"
+import { Building2 } from "lucide-react"
 const Sidebar = () => {
+
+
   
   return (
-    <div className={`hidden md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950 dark:bg-slate-950/80 
-    backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50  flex-col fixed top-0 left-0 md:relative`}>
-     <div className="p-6  dark:border-slate-700/50">
+    <div className={`hidden md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950
+    backdrop-blur-xl border-r border-slate-200/50   flex-col fixed top-0 left-0 md:relative`}>
+     <div className="p-6">
      
       {/*logo*/}
         <div className="flex items-center space-x-3">
@@ -20,27 +22,19 @@ const Sidebar = () => {
      </div>
 
     {/*navigation*/}
+    <aside>
      <nav className=" md:inline-flex flex-col mt-10 gap-3">
-          <Link to="/" className=" rounded-sm hover:bg-blue-600 transition hover:text-white px-2 py-2.5 flex gap-4 text-white items-center">
-             <House size={30} />
-             <h2  className={` font-medium text-slate-100`}>Overview</h2>
-          </Link>
-
-          <Link to='/Compagnyprofile' className="rounded-sm hover:bg-blue-600 transition hover:text-white px-2 py-2.5 flex gap-4 text-white items-center">
-            <BriefcaseBusinessIcon size={30} />
-             <h2 className={` font-medium text-slate-100`}>Company Profile</h2>
-          </Link>
-
-          <div className="rounded-sm hover:bg-blue-600 transition hover:text-white px-2 py-2.5 flex gap-4 text-white items-center">
-            <Users size={30} />
-             <a href="http://" className={` font-medium text-slate-100`}>users</a>
-          </div>
-
-          <div className="rounded-sm hover:bg-blue-600 transition hover:text-white px-2 py-2.5 flex gap-4 text-white items-center">
-            <Settings size={30} />
-             <a href="http://" className={` font-medium text-slate-100`}>users</a>
-          </div>
+           {sidebarItems.map((item)=>{
+             const Icon = item.icon
+             return(
+              <NavLink key={item.to} to={item.to} className="rounded-sm hover:bg-blue-600 transition hover:text-white px-2 py-2.5 flex gap-4 text-white items-center">
+                 <Icon size={35} />
+                 <h2 className={` font-medium text-slate-100`}>{item.title}</h2>
+             </NavLink>
+             )
+           })}
        </nav>
+      </aside>
      </div>
     </div>
   )

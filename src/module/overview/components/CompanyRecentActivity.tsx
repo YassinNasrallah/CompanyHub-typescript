@@ -11,12 +11,12 @@ const CompanyRecentActivity = () => {
         <div className="flex flex-col gap-3">
 
                   {invitedUsers.map((user)=>(
-                    <div className="flex items-center justify-between" key={user.id} >
+                    <div className="flex items-center justify-between text-sm" key={user.id} >
                      <div className="flex justify-between items-center gap-5">
                       <UserPlus className="bg-green-100 text-green-600 p-2 w-10 h-10 rounded-full"/>
                       <div>
-                        <h2 className="text-gray-900 font-medium">New Invited</h2>
-                        <h3 className="text-gray-600  font-sm">{user.email}</h3>
+                        <h2 className="text-gray-900 font-bold">New Invited</h2>
+                        <h3 className="text-gray-600 font-sm">{user.email}</h3>
                       </div>
                      </div>
                      <div>
@@ -28,7 +28,7 @@ const CompanyRecentActivity = () => {
                     <div className="border border-gray-100"></div>
 
                    {deactivatedUsers.map((user)=>(
-                       <div className="flex items-center justify-between" key={user.id}>
+                       <div className="flex items-center justify-between text-sm" key={user.id}>
                      <div className="flex justify-between items-center gap-5">
                       <UserX className="bg-red-100 text-red-600 p-2 w-10 h-10 rounded-full"/>
                       <div>
