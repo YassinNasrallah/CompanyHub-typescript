@@ -16,7 +16,7 @@ const Dashboard = () => {
               <Navbar />
                  <OverviewHeader />
                  <OverviewCards />
-                 <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 m-8 ">
+                 <div className="m-5 grid sm:grid-cols-1 lg:grid-cols-2 gap-4 justify-center ">
                   <CompanyProfilecard />
                   <CompanyRecentActivity />
                  </div>

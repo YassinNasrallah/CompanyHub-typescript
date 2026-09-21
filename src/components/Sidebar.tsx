@@ -5,9 +5,9 @@ import { Building2,Settings, House, BriefcaseBusinessIcon, Users  } from "lucide
 const Sidebar = () => {
   
   return (
-    <div className={` md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950 dark:bg-slate-950/80 
-    backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col fixed top-0 left-0 md:relative`}>
-     <div className=" p-6  dark:border-slate-700/50">
+    <div className={`hidden md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950 dark:bg-slate-950/80 
+    backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50  flex-col fixed top-0 left-0 md:relative`}>
+     <div className="p-6  dark:border-slate-700/50">
      
       {/*logo*/}
         <div className="flex items-center space-x-3">
@@ -20,7 +20,7 @@ const Sidebar = () => {
      </div>
 
     {/*navigation*/}
-     <nav className="inline-flex flex-col mt-10 gap-3">
+     <nav className=" md:inline-flex flex-col mt-10 gap-3">
           <Link to="/" className=" rounded-sm hover:bg-blue-600 transition hover:text-white px-2 py-2.5 flex gap-4 text-white items-center">
              <House size={30} />
              <h2  className={` font-medium text-slate-100`}>Overview</h2>

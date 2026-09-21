@@ -3,7 +3,7 @@ import useMenu from "../hook/useMenu"
 const Navbar = () => {
   const { handlClick} = useMenu()
   return (
-    <div className=" flex justify-between item-center relative bg-white p-4  ">
+    <div className="flex justify-between item-center relative bg-white p-4 ">
       <div className=" gap-4 justify-center items-center flex lg:hidden md:hidden relative">
           <Menu onClick={handlClick} size={35} className="cursor-pointer"/>
         <div className="flex items-center gap-2">

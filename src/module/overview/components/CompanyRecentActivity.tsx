@@ -3,7 +3,7 @@ import { UserPlus, UserX } from "lucide-react";
 import { deactivatedUsers, invitedUsers } from "../../../data/usersData";
 const CompanyRecentActivity = () => {
   return (
-    <div className='flex flex-col gap-5 ml-3 bg-white  rounded-xl border border-gray-800/20 p-6'>
+    <div className='flex flex-col gap-5  bg-white  rounded-xl border border-gray-800/20 p-6'>
         <div className=" flex justify-between items-center gap-7">
              <h2 className="font-semibold text-xl">Recently Activity</h2>
              <button className="text-blue-600 bg-transparent border-none">View All</button>
@@ -24,6 +24,8 @@ const CompanyRecentActivity = () => {
                      </div>  
                     </div>
                    ))}
+
+                    <div className="border border-gray-100"></div>
 
                    {deactivatedUsers.map((user)=>(
                        <div className="flex items-center justify-between" key={user.id}>
