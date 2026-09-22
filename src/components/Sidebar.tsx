@@ -2,10 +2,7 @@
 import { sidebarItems } from "../interface/SidebarType"
 import { NavLink } from "react-router-dom"
 import { Building2 } from "lucide-react"
-const Sidebar = () => {
-
-
-  
+const Sidebar = () => {  
   return (
     <div className={`hidden md:flex lg:flex h-screen transition-all duration-300 ease-in-out bg-blue-950
     backdrop-blur-xl border-r border-slate-200/50   flex-col fixed top-0 left-0 md:relative`}>
