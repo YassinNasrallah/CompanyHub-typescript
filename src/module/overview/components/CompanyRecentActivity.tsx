@@ -1,7 +1,8 @@
 import { UserPlus, UserX } from "lucide-react";
 
-import { deactivatedUsers, invitedUsers } from "../../../data/usersData";
+import { deactivatedUsers, invitedUsers } from "../../../utils/userFilters";
 import { Link } from "react-router-dom";
+import type { UserType } from "../../../types/usertype";
 const CompanyRecentActivity = () => {
   return (
     <div className='flex flex-col gap-5  bg-white  rounded-xl border border-gray-800/20 p-6'>
@@ -11,7 +12,7 @@ const CompanyRecentActivity = () => {
        </div>
         <div className="flex flex-col gap-3">
 
-                  {invitedUsers.map((user)=>(
+                  {invitedUsers.map((user:UserType)=>(
                     <div className="border-b p-2 border-slate-200 flex items-center justify-between text-sm" key={user.id} >
                      <div className="flex justify-between items-center gap-5">
                       <UserPlus className="bg-green-100 text-green-600 p-2 w-10 h-10 rounded-full"/>
@@ -28,7 +29,7 @@ const CompanyRecentActivity = () => {
 
                     
 
-                   {deactivatedUsers.map((user)=>(
+                   {deactivatedUsers.map((user:UserType)=>(
                        <div className="flex items-center justify-between text-sm" key={user.id}>
                      <div className="flex justify-between items-center gap-5">
                       <UserX className="bg-red-100 text-red-600 p-2 w-10 h-10 rounded-full"/>

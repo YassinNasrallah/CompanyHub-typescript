@@ -3,7 +3,13 @@ import Sidebar from '../../../components/Sidebar'
 import Navbar from '../../../components/Navbar'
 import BottomNavbar from '../../../components/BottomNavbar'
 import Userstable from '../components/Userstable'
+import Addusercard from '../components/Addusercard'
+import { useState } from 'react'
 const Users = () => {
+    const [isaddUsersopen, setIsaddUsersopen] = useState<boolean>(false)
+    const openAddUser = () =>{
+      setIsaddUsersopen(true)
+     }
   return (
     <div className='min-h-screen 
        bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-50
@@ -15,6 +21,7 @@ const Users = () => {
             <main className='pb-30'>
             <UsersHeader />
             <Userstable />
+            <Addusercard />
             </main>
             <BottomNavbar />
            </div>
