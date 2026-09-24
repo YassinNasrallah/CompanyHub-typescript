@@ -1,4 +1,8 @@
-const UsersHeader = () => {
+type userHeaderProps = {
+  onAdduser:()=>void
+}
+
+const UsersHeader = ({onAdduser}:userHeaderProps) => {
 
   return (
             <div className=" flex items-center justify-between  m-5">
@@ -8,7 +12,7 @@ const UsersHeader = () => {
               </div>
 
               <div className="mr-5">
-                 <button type="button" className="bg-blue-600 p-3 rounded-md text-sm text-white cursor-pointer">+ Add User</button>
+                 <button type="button" onClick={onAdduser} className="bg-blue-600 p-3 rounded-md text-sm text-white cursor-pointer">+ Add User</button>
               </div>
              </div>
       
