@@ -20,13 +20,11 @@ const Users = () => {
             <main className='pb-30 relative'>
             <UsersHeader onAdduser={()=>setIsaddUsersopen(true)}/>
             <Userstable />
-            
              {isaddUsersopen && (
                <div className="fixed z-50 inset-0 bg-black/50 flex justify-center items-center backdrop-blur-md">
                    <Addusercard onClose={()=>setIsaddUsersopen(false)}/> 
                </div>
              )}
-            
             
             </main>
             <BottomNavbar />

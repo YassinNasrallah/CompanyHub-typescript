@@ -11,17 +11,20 @@ const Addusercard = ({onClose}:AddusercardProps) => {
         user:'',
         email:'',
         role:'',
-        date:'',
+        date:'Developer',
     })
-    
+    const handleSubmit = (event:React.FormEvent<HTMLFormElement>) =>{
+       event.preventDefault()
+       console.log(newUser)
+    }
   return (
     <div className='flex rounded-md flex-col gap-7 bg-white m-auto w-150  p-7'>
         <div className="flex justify-between">
             <h2 className='text-xl font-semibold'>Add User</h2>
-            <button type='button' onClick={onClose} ><X /></button>
+            <button type='button' onClick={onClose} className='cursor-pointer'><X /></button>
         </div>
 
-        <form className='flex flex-col gap-4'>
+        <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div className="flex flex-col gap-1">
               <label className='text-gray-800 font-medium'>Full name</label>
               <input type="text" value={newUser.user} className='border p-1 rounded-md outline-none border-gray-200' placeholder='enter full name' onChange={(e)=>setNewUser({...newUser, user:e.target.value})} required />
@@ -44,7 +47,7 @@ const Addusercard = ({onClose}:AddusercardProps) => {
         </form>
 
         <div className="flex gap-3 ">
-            <button type='button' className="bg-blue-600 p-3 rounded-md text-sm text-white cursor-pointer">Add User</button>
+            <button type='submit' className="bg-blue-600 p-3 rounded-md text-sm text-white cursor-pointer">Add User</button>
             <button className='text-blue-600 cursor-pointer'>Cancel</button>
         </div>
         
