@@ -1,5 +1,7 @@
 import { Search, CircleUserRound, Building2, X } from "lucide-react"
 import { useState } from "react"
+import Searchbar from "./Searchbar"
+import useUsers from "../hook/useUsers"
 
 const Navbar = () => {
 
@@ -8,6 +10,7 @@ const Navbar = () => {
   const handlClick = () =>{
     setOpenSearchbar(prev => !prev) 
   }
+  const {users} = useUsers()
   
   return (
     <div className="flex justify-between item-center relative bg-white p-4 ">
@@ -19,8 +22,7 @@ const Navbar = () => {
       </div>
 
       <div className={`${openSearchbar? 'flex' : 'hidden'} md:flex relative w-100 `}>
-            <Search className="right-0 absolute left-3 -translate-y-1/2 top-1/2 "/>
-            <input autoFocus={openSearchbar} type="text" placeholder="Search" className={` rounded-md bg-linear-to-br from-slate-100 via-blue-50 to-indigo-50 w-full p-2 pl-10 outline-none border border-transparent duration-300 focus:border-gray-300 `}/>
+            <Searchbar data={users?.users??[]}/>
       </div>
       
       <div className="flex gap-3 items-center px-4">
